@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: linear-gradient(
+    rgba(209, 206, 217, 0.8),
+    rgba(209, 206, 217, 0.6)
+  ), 
+  url(images/CJWebDevlogo.svg) center no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  text-shadow: -9px 10px 10px rgba(117,89,93,0.51);
+}
+
+.banner {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner h1 {
+  color:#75595d;
+  font-weight: 400;
+  font-size: 80px;
+  text-shadow: -9px 10px 10px rgba(117,89,93,0.51);
+  animation: moveToLeft 2s 1.5s;
+}
+
+.banner h1 span {
+  text-transform: uppercase;
+  filter: brightness(1.3);
+  font-weight: 600;
+}
+
+.banner p {
+  font-size: 45px;
+  font-weight: 300;
+  color: #604f53;
+  margin-bottom: 20px;
+  animation: moveToRight 2s 2s;
+}
+
+
+#span1 {
+  background-color: #75595d;
+  color: #eff0ed;
+  border-radius: 10px;
+}
+
+#span2 {
+  font-weight: 800;
+  color: #75595d;
+  margin: 0 -20px 20px 0;
+}
+
+.banner button {
+  border: 2px solid rgba(117, 89, 93, 0.8);
+  border-radius: 50px;
+  width: 180px;
+  margin: 20px;
+  padding: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-left {
+  background-color: rgba(117, 89, 93, 0.98);
+  color: rgb(209, 206, 217);
+  animation: animateBtn 2s 2.5s backwards;
+}
+
+.btn-right {
+  background-color: transparent;
+  color: rgb(117, 89, 93);
+  animation: animateBtn 2s 3s backwards; 
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateBtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
